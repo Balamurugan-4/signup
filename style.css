@@ -1,0 +1,120 @@
+/* Base styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Background with blur and animation */
+  .background {
+    background: linear-gradient(120deg, #f093fb, #f5576c, #4facfe);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Gradient animation */
+  @keyframes gradientMove {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+  }
+  
+  /* Glass card container */
+  .signup-container {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 40px 35px;
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 360px;
+    color: #fff;
+  }
+  
+  /* Form heading */
+  .signup-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+  
+  /* Input group */
+  .input-field {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .input-field input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  .input-field label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #ccc;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  
+  .input-field input:focus + label,
+  .input-field input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 0 5px;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  /* Button */
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #ffffff;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.4s;
+  }
+  
+  button:hover {
+    background: #ffe5ec;
+    transform: scale(1.02);
+  }
+  
+  /* Bottom link */
+  .login-text {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #f1f1f1;
+  }
+  
+  .login-text a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+  
